@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>apple watch效果</title>
+    <style>
+    body {
+    	padding: 0;
+    	margin: 0;
+    }
+    .wrapper {
+        position: absolute;
+        top: 50%;
+        margin-top: -5em;
+        width: 10em;
+        height: 10em;
+        left: 50%;
+        margin-left: -5em;
+    }
+
+    .wrapper::after {
+    	content: "";
+    	position: absolute;
+    	background-color: #fff;
+    	border-radius: 50%;
+    	width: 8em;
+    	height: 8em;
+    	top: 1em;
+    	left: 1em;
+    }
+    
+    .dial-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 5em;
+        overflow: hidden;
+    }
+    
+    .wedge {
+        background-color: #f00;
+        width: 5em;
+        height: 10em;
+    }
+    
+    .container1 {
+        left: 5em;
+    }
+    
+    .container1 .wedge {
+        animation: rotate-bg-1 4s infinite linear;
+        border-radius: 0 10em 10em 0;
+        left: 0;
+        transform-origin: 0 50%;
+    }
+    
+    .container2 {
+        left: 0;
+    }
+    
+    .container2 .wedge {
+        animation: rotate-bg-2 4s infinite linear;
+        border-radius: 10em 0 0 10em;
+        transform-origin: 5em 5em;
+    }
+    
+    @keyframes rotate-bg-1 {
+        50%, 100% {
+            transform: rotateZ(180deg);
+        }
+    }
+    
+    @keyframes rotate-bg-2 {
+        0%, 50% {
+            transform: rotateZ(0);
+        }
+        100% {
+            transform: rotateZ(180deg);
+        }
+    }
+    .marker {
+    	position: absolute;
+    	width: 1em;
+    	height: 1em;
+    	background-color: #0f0;
+    	border-radius: 50%;
+    	top: 0;
+    	left: 50%;
+    	margin-left: -0.5em;
+    }
+    .end {
+    	animation: rotate-marker 4s infinite linear;
+    	transform-origin: 50% 5em;
+
+    }
+    @keyframes rotate-marker {
+    	100% {
+    		transform: rotateZ(360deg);
+    	}
+    }
+
+    .wrapper1 {
+        position: absolute;
+        top: 50%;
+        margin-top: -4em;
+        width: 8em;
+        height: 8em;
+        left: 50%;
+        margin-left: -4em;
+    }
+
+    .wrapper1::after {
+    	content: "";
+    	position: absolute;
+    	background-color: #fff;
+    	border-radius: 50%;
+    	width: 6em;
+    	height: 6em;
+    	top: 1em;
+    	left: 1em;
+    }
+    
+    .dial-container1 {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 4em;
+        overflow: hidden;
+    }
+    
+    .wedge1 {
+        background-color: #1662AD;
+        width: 4em;
+        height: 8em;
+    }
+    
+    .container3 {
+        left: 4em;
+    }
+    
+    .container3 .wedge1 {
+        animation: rotate-bg-1 4s infinite linear;
+        border-radius: 0 8em 8em 0;
+        left: 0;
+        transform-origin: 0 50%;
+    }
+    
+    .container4 {
+        left: 0;
+    }
+    
+    .container4 .wedge1 {
+        animation: rotate-bg-2 4s infinite linear;
+        border-radius: 8em 0 0 8em;
+        transform-origin: 4em 4em;
+    }
+    
+    .marker1 {
+    	position: absolute;
+    	width: 1em;
+    	height: 1em;
+    	background-color: #0f0;
+    	border-radius: 50%;
+    	top: 0;
+    	left: 50%;
+    	margin-left: -0.5em;
+    }
+    .end1 {
+    	animation: rotate-marker 4s infinite linear;
+    	transform-origin: 50% 4em;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="dial-container container1">
+            <div class="wedge"></div>
+        </div>
+        <div class="dial-container container2">
+            <div class="wedge"></div>
+        </div>
+        <div class="marker start"></div>
+        <div class="marker end"></div>
+    </div>
+
+    <div class="wrapper1">
+        <div class="dial-container1 container3">
+            <div class="wedge1"></div>
+        </div>
+        <div class="dial-container1 container4">
+            <div class="wedge1"></div>
+        </div>
+        <div class="marker1 start1"></div>
+        <div class="marker1 end1"></div>
+    </div>
+</body>
+
+</html>
